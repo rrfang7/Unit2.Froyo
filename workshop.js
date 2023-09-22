@@ -1,39 +1,15 @@
+// create prompt for user to store froyo flavors
+const userObjectText = prompt("Please enter a list of comma-separated froyo flavors.");
+console.log(userObjectText);
+
 
 // array of flavors
- const flavors = ["vanilla", "coffee", "strawberry"];
-console.log(flavors);
+const froyoFlavors = ["vanilla", "coffee", "strawberry"];
 
-const userObjectText = prompt("Pick a froyo flavor");
-const userObject = JSON.parse(userObjectText);
-
-const orderFroyo = { 
-    vanilla: 3,
-    coffee: 2,
-    strawberry: 1
-}
-console.log(orderFroyo)
-
-/*
-function gimmeAnObject(key, value) {
-    const obj = {};
-    obj[key] = value;
-    return obj;
-}
-*/
-
-const myFroyo = gimmeAnObject("flavors", "vanilla")
-console.log("myFroyo", myFroyo);
-
- 
+// split user input into array
+const flavor = userObjectText.split(",");
+console.log(flavor);
 
 
-/* 
-const userObjectText = prompt('Please enter a list of comma-separated froyo flavors.');
-const userObjectArray = userObjectText.split(',');
-const froyo = {
- orderedFlavors: userObjectArray
-};
-console.log(froyo);
-console.table(froyo);
-
-*/
+// user input
+// vanilla,vanilla,vanilla,strawberry,coffee,coffee
